@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>OpenCurren</title>   
+        <link rel="stylesheet" type="text/css" href="css/styleCurrency.css">  
+        <link href="css/select2.css" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+      <ul class="navbar">
+        <li id="logo"><img src="assets/Logo_openCurren.svg"></li> 
+        <li id="date">Fecha</li>
+      </ul>
+    </nav>
+    <div class="wrapper" >
+        <div id="containerFrom">
+          <input class="inputSlot" id="fromQuantity" type="number" value="1" onchange="convertCurrencyRight()" onkeyup="convertCurrencyRight()"/>
+          <select id="from" onchange="convertCurrencyRight()" onkeyup="convertCurrencyRight()" class="js-example-templating" >
+            <option value="GBP" data-lookup="England, UK, Britain, Pound" selected>GBP</option>
+            <option value="EUR" data-lookup="Austria, Belgium, Bulgaria, Croatia, Republic of Cyprus, Czech Republic, Estonia, Finland, France, Germany, Greece, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Portugal, Slovakia, Slovenia, Spain" >EUR</option>
+          </select>
+         </div>   
+        <div id="arrow"><img src="assets/Arrow.svg"> </div>
+        <div id="containerTo"> 
+         <input class="inputSlot" id="toQuantity" type="number" value="0" onchange="convertCurrencyLeft()" onkeyup="convertCurrencyLeft()"/>
+          <select id="to"  onchange="convertCurrencyRight()" onkeyup="convertCurrencyRight()" class="js-example-templating">
+            <option value="USD" data-lookup="United States of America, Dollar, USA" selected>USD </option>
+            <option value="EUR" data-lookup="Austria, Belgium, Bulgaria, Croatia, Republic of Cyprus, Czech Republic, Estonia, Finland, France, Germany, Greece, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Portugal, Slovakia, Slovenia, Spain" >EUR </option>
+          </select>
+        </div>
+    </div>     
+    <div class="wrapper">
+        <div id="containerCValues">
+            <p id="currentRateA"> 1 -- = --   </p>
+            <p id="currentRateB"> 1 -- = --   </p>
+        </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/select2.js"></script>
+    <script type="text/javascript" src="js/indexCurrencyFirst.js" ></script>
+    <script type="text/javascript" src="js/indexCurrency.js" ></script>
+    <script type="text/javascript" src="js/indexCurrencyLast.js" ></script>
+</body>
+</html>
