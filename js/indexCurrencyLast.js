@@ -9,17 +9,15 @@ function formatState (state) {
     return state.text;
   }
   var baseUrl = "assets/flags";
-  console.log(state);
   var $state = $(
-    '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" id="intent" width= "30" /> ' + '<p class="currenName">' + state.text.substr(0, 4) + '</p></span>'
+    '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" id="intent" width= "30" /> ' + '<p class="curren-name">' + state.text.substr(0, 4) + '</p></span>'
   );
   return $state;
 };
 
-//Search for currencies
 
+//Search for currencies
 function matchCustom(params, data) {
-   
     
   // If there are no search terms, return all of the data
   if ($.trim(params.term) === '') {

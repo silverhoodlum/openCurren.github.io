@@ -8,15 +8,15 @@ function convertCurrencyRight() {
       .then(function(data){
         //if both currencies are the same return identical values
         (fromCurrency===toCurrency) ? 
-        (document.getElementById("toQuantity").value = document.getElementById("fromQuantity").value,
-        document.getElementById("currentRateA").textContent= "1 " + fromCurrency + " = " + "...",
-        document.getElementById("currentRateB").textContent= "")
+        (document.getElementById("to-quantity").value = document.getElementById("from-quantity").value,
+        document.getElementById("current-rate-a").textContent= "1 " + fromCurrency + " = " + "...",
+        document.getElementById("current-rate-b").textContent= "")
         :
         //otherwise return the top value as the multiplication of top currency rate by the amount specied below
-        (document.getElementById("toQuantity").value = (data.rates[toCurrency]*document.getElementById("fromQuantity").value).toFixed(3),
+        (document.getElementById("to-quantity").value = (data.rates[toCurrency]*document.getElementById("from-quantity").value).toFixed(3),
         //change the single amount values
-        document.getElementById("currentRateA").textContent= "1 " + fromCurrency + " = " + (data.rates[toCurrency]).toFixed(6) + " " + toCurrency,
-        document.getElementById("currentRateB").textContent= "1 " + toCurrency + " = " + (1/data.rates[toCurrency]).toFixed(6) + " " + fromCurrency)
+        document.getElementById("current-rate-a").textContent= "1 " + fromCurrency + " = " + (data.rates[toCurrency]).toFixed(6) + " " + toCurrency,
+        document.getElementById("current-rate-b").textContent= "1 " + toCurrency + " = " + (1/data.rates[toCurrency]).toFixed(6) + " " + fromCurrency)
         //load the date of the current rates
         var date = document.getElementById("date");
         date.innerHTML = "LAST UPDATED " +
@@ -41,14 +41,14 @@ function convertCurrencyLeft() {
         //if both currencies are the same return identical values
         (toCurrency===fromCurrency) ?
         (document.getElementById("fromQuantity").value = document.getElementById("toQuantity").value,
-        document.getElementById("currentRateA").textContent= "1 " + fromCurrency + " = " + "...",
-        document.getElementById("currentRateB").textContent= "") 
+        document.getElementById("current-rate-a").textContent= "1 " + fromCurrency + " = " + "...",
+        document.getElementById("current-rate-b").textContent= "") 
         :
         //otherwise return the top value as the multiplication of top currency rate by the amount specied below
-        (document.getElementById("fromQuantity").value = (data.rates[fromCurrency]*document.getElementById("toQuantity").value).toFixed(3),
+        (document.getElementById("from-quantity").value = (data.rates[fromCurrency]*document.getElementById("to-quantity").value).toFixed(3),
         //change the single amount values
-        document.getElementById("currentRateA").textContent= "1 " + fromCurrency + " = " + (1/data.rates[fromCurrency]).toFixed(6) + " " + toCurrency,
-        document.getElementById("currentRateB").textContent= "1 " + toCurrency + " = " + (data.rates[fromCurrency]).toFixed(6) + " " + fromCurrency)
+        document.getElementById("current-rate-a").textContent= "1 " + fromCurrency + " = " + (1/data.rates[fromCurrency]).toFixed(6) + " " + toCurrency,
+        document.getElementById("current-rate-b").textContent= "1 " + toCurrency + " = " + (data.rates[fromCurrency]).toFixed(6) + " " + fromCurrency)
         //load the date of the current rates
         var date = document.getElementById("date");
         date.innerHTML = "LAST UPDATED " +

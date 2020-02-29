@@ -5,20 +5,14 @@ fetch("https://api.exchangeratesapi.io/latest?base=")
       .then(function(data){
         var allRates = data.rates;
         var selectA = document.getElementById("from");
-         var selectB = document.getElementById("to");
-         allRates = Object.entries(allRates)
+        var selectB = document.getElementById("to");
+        allRates = Object.entries(allRates)
 
-        function getLookUp(input) {
-                
-        }
-
-         
          for(var i = 0; i < allRates.length; i++) {
             var opt = allRates[i][0];
             var el = document.createElement("option");
             el.textContent = opt;
             el.value = opt;
-             
             var lookUp=document.createAttribute("data-lookup");
                 var inputMap = {
                     "USD": "United States of America Dollar USA",
@@ -98,10 +92,8 @@ fetch("https://api.exchangeratesapi.io/latest?base=")
                 };
             lookUp.value= inputMap[opt];
             la.setAttributeNode(lookUp);
-             
-             selectB.appendChild(la);
+            selectB.appendChild(la);
         }   
-     
         })
         
         .catch(function(error) {
@@ -112,7 +104,7 @@ fetch("https://api.exchangeratesapi.io/latest?base=")
 
 var background = document.getElementsByTagName("body")[0];
 
-resizeBackground ()
+resizeBackground();
 
 
 function resizeBackground (){
