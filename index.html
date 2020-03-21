@@ -22,7 +22,7 @@
             <option value="EUR" data-lookup="Austria, Belgium, Bulgaria, Croatia, Republic of Cyprus, Czech Republic, Estonia, Finland, France, Germany, Greece, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Portugal, Slovakia, Slovenia, Spain" >EUR</option>
           </select>
          </div>   
-        <div id="arrow"><img src="assets/Arrow.svg"> </div>
+        <div id="arrow" onclick="swapCurrency()"><img src="assets/Arrow.svg"> </div>
         <div id="container-to"> 
          <input class="input-slot" id="to-quantity" type="number" value="0" onchange="convertCurrencyLeft()" onkeyup="convertCurrencyLeft()"/>
           <select id="to"  onchange="convertCurrencyRight()" onkeyup="convertCurrencyRight()" class="js-example-templating">

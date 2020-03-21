@@ -39,13 +39,13 @@ body{
 }
     
 #logo{
-    height: 50px;
-    width: 257px;
+    height: 45px;
+    width: 231px;
     margin: 5% auto;
 }
     
 .input-slot{
-    height: 50px;
+    height: 40px;
     width: 220px;
     background-color: #ffffff;
     color: #227bd6;
@@ -59,27 +59,31 @@ body{
     display: flex;
     justify-content: space-between;
     flex-flow: column wrap;
-    margin: 6% auto;
+    margin: 2% auto;
 }
 
 #arrow img{
-    height:80px;
-    width:80px;
+    height:70px;
+    width:70px;
     transform: rotate(90deg);
+    cursor: pointer;
 }
-    
+
+#arrow img:hover{
+    filter: brightness(1.2);
+}
 #date{
     font-family: CourierPrimeBold;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 0px;
-    margin: 12% auto;
+    margin: 6% auto;
 }
     
 .wrapper{
     display: flex;
     flex-flow: row wrap;
     width: 75%;
-    margin: 4% auto;
+    margin:  auto;
 }
     
 #container-from{
@@ -114,7 +118,51 @@ body{
 /*---------------------------- LARGE SMARTPHONES --------------------------------*/
 /*-------------------------------------------------------------------------------*/
 
-@media (min-width: 400px) and (min-height: 800px){
+@media (min-height : 600px){
+.navbar{
+    padding: 4% 0 0 0;
+}
+    
+#logo{
+    height: 50px;
+    width: 257px;
+    margin: 6% auto;
+}
+    
+#arrow img{
+    height:100px;
+    width:100px;
+    transform: rotate(90deg);
+}
+    
+#date{
+    font-family: CourierPrimeBold;
+    font-size: 1.3rem;
+    line-height: 0rem;
+    margin: 8% auto;
+}
+    
+.wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    width: 75%;
+    margin: 4% auto;
+}  
+
+#container-c-values{
+    font-family: CourierPrime;
+    display: flex;
+    flex-flow: column wrap;
+    margin: 6% auto;
+    font-size: 1.3rem;
+}
+}
+
+
+/*---------------------------- XLARGE SMARTPHONES --------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+@media (min-width: 400px) {
 .navbar{
     list-style-type: none;
     display: flex;
@@ -152,27 +200,62 @@ body{
     font-family: CourierPrimeBold;
     font-size: 1.375rem;
     line-height: 0rem;
-    margin: 16% auto;
+    margin: 6% auto;
 }
     
 .wrapper{
     display: flex;
     flex-flow: row wrap;
-    width: 75%;
+    width: 65%;
     margin: 4% auto;
-}
-    
-#container-from{
+}  
+
+#container-c-values{
+    font-family: CourierPrime;
     display: flex;
     flex-flow: column wrap;
-    margin: 6% auto;
+    margin: 12% auto;
+    font-size: 1.33rem;
+}
 }
 
-#container-to{
-    display: flex;
-    flex-flow: column wrap;
-    margin:  6% auto;
+
+/*---------------------------- SMALL TABLETS --------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+@media (min-width: 430px) {
+    
+.input-slot{
+    height: 50px;
+    width: 220px;
+    background-color: #ffffff;
+    color: #227bd6;ios
+    font-size:2rem;
+    text-align: center;
+    margin-bottom: 0.6rem;
+    border: 1.5px solid #292b29;
 }
+    
+#arrow img{
+    height:100px;
+    width:100px;
+    transform: rotate(90deg);
+}
+    
+#date{
+    font-family: CourierPrimeBold;
+    font-size: 1.375rem;
+    line-height: 0rem;
+    margin: 6% auto;
+}
+    
+.wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    width: 40%;
+    margin: 4% auto;
+}  
+
 #container-c-values{
     font-family: CourierPrime;
     display: flex;
@@ -243,8 +326,8 @@ body{
 #container-c-values{
     display: flex;
     flex-flow: column wrap;
-    margin: 4% auto;
-    font-size: 2rem;
+    margin: 2% auto;
+    font-size: 1.5rem;
 }
     
 }
@@ -302,7 +385,7 @@ body{
     display: flex;
     flex-flow: column wrap;
     margin: 4% auto;
-    font-size: 2.3rem;
+    font-size: 1.4rem;
 }
     
 }

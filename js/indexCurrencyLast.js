@@ -1,3 +1,5 @@
+//Convert currency when page is loaded
+
 $(document).ready(function() {
     convertCurrencyRight();
 });

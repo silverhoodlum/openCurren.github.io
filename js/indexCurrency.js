@@ -2,7 +2,6 @@ function convertCurrencyRight() {
     var fromCurrency = document.getElementById("from").value;
     var toCurrency = document.getElementById("to").value;
 
-
     fetch("https://api.exchangeratesapi.io/latest?base=" + fromCurrency)
       .then((resp) => resp.json())
       .then(function(data){
@@ -22,7 +21,6 @@ function convertCurrencyRight() {
         date.innerHTML = "LAST UPDATED " +
         data.date.split("-").reverse().join("-");
         
-
         })
     
         .catch(function(error) {
@@ -34,7 +32,7 @@ function convertCurrencyRight() {
 function convertCurrencyLeft() {
     var fromCurrency = document.getElementById("from").value;
     var toCurrency = document.getElementById("to").value;
-    console.log(toCurrency);
+    
     fetch("https://api.exchangeratesapi.io/latest?base=" + toCurrency)
         .then((resp) => resp.json())
         .then(function(data){
@@ -60,3 +58,21 @@ function convertCurrencyLeft() {
         });
 }
 
+//swap currencies if someone clicks arrow
+
+function swapCurrency() {
+    var selectA = document.getElementById("from");
+    var selectB = document.getElementById("to");
+    var temp = selectA.value;
+    //change value
+    selectA.value = selectB.value;
+    //change the displayed value
+    $('#from').val(selectA.value).trigger('change');
+    //change value
+    selectB.value = temp;
+    //change the displayed value
+    $('#to').val(selectB.value).trigger('change');
+    
+    //calculate new set up
+    convertCurrencyRight();
+}

@@ -7,7 +7,9 @@ fetch("https://api.exchangeratesapi.io/latest?base=")
         var selectA = document.getElementById("from");
         var selectB = document.getElementById("to");
         allRates = Object.entries(allRates)
-
+    
+ //fill select from
+    
          for(var i = 0; i < allRates.length; i++) {
             var opt = allRates[i][0];
             var el = document.createElement("option");
@@ -49,8 +51,9 @@ fetch("https://api.exchangeratesapi.io/latest?base=")
                 };
             lookUp.value= inputMap[opt];
             el.setAttributeNode(lookUp);
-             
             selectA.appendChild(el);
+             
+ //fill select to 
              
             var la = document.createElement("option");
              la.textContent = opt;
